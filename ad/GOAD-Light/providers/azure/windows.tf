@@ -6,7 +6,7 @@
   windows_version    = "latest" # deprecated : "2019.0.20181122"
   private_ip_address = "{{ip_range}}.10"
   password           = "8dCT-DJjgScp"
-  size               = "Standard_B2s"
+  size               = "Standard_B1ms"
 }
 "dc02" = {
   name               = "dc02"
@@ -16,7 +16,7 @@
   windows_version    = "latest" # deprecated : "2019.0.20181122"
   private_ip_address = "{{ip_range}}.11"
   password           = "NgtI75cKV+Pu"
-  size               = "Standard_B2s"
+  size               = "Standard_B1ms"
 }
 "srv02" = {
   name               = "srv02"
@@ -26,5 +26,5 @@
   windows_version    = "latest" # deprecated : "2019.0.20181122"
   private_ip_address = "{{ip_range}}.22"
   password           = "NgtI75cKV+Pu"
-  size               = "Standard_B2s"
+  size               = "Standard_B1ms"
 }

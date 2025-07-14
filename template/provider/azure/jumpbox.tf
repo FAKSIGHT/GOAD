@@ -7,6 +7,7 @@ resource "azurerm_public_ip" "ubuntu_public_ip" {
   name                = "ubuntu-public-ip"
   location            = azurerm_resource_group.resource_group.location
   resource_group_name = azurerm_resource_group.resource_group.name
+  sku                 = "Standard"
   allocation_method   = "Static"
 }
 

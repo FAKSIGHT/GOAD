@@ -37,7 +37,7 @@ az login
 # ~/.goad/goad.ini
 ...
 [azure]
-az_location = westeurope
+az_location = swedencentral
 ```
 
 - If you want to use a different location you can modify it.

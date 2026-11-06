@@ -6,7 +6,7 @@ variable "location" {
 # default size : 2cpu / 4GB
 variable "size" {
   type    = string
-  default = "Standard_B2ls_v2"
+  default = "Standard_D2as_v4"
 }
 
 variable "username" {

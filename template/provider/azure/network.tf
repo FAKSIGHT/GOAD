@@ -1,7 +1,7 @@
 resource "azurerm_virtual_network" "virtual_network" {
   name                = "{{lab_name}}-virtual-network"
   address_space       = ["{{ip_range}}.0/24"]
-  location            = azurerm_resource_group.resource_group.location
+  location            = var.location
   resource_group_name = azurerm_resource_group.resource_group.name
 }
 
@@ -16,7 +16,7 @@ resource "azurerm_network_interface" "goad-vm-nic" {
   for_each = var.vm_config
 
   name                = "{{lab_name}}-vm-${each.value.name}-nic"
-  location            = azurerm_resource_group.resource_group.location
+  location            = var.location
   resource_group_name = azurerm_resource_group.resource_group.name
 
   ip_configuration {
@@ -31,7 +31,7 @@ resource "azurerm_network_interface" "goad-linux-vm-nic" {
   for_each = var.linux_vm_config
 
   name                = "{{lab_name}}-vm-${each.value.name}-nic"
-  location            = azurerm_resource_group.resource_group.location
+  location            = var.location
   resource_group_name = azurerm_resource_group.resource_group.name
 
   ip_configuration {

@@ -21,7 +21,7 @@ resource "azurerm_windows_virtual_machine" "goad-vm" {
   for_each = var.vm_config
 
   name                = "goad-vm-${each.value.name}"
-  location            = azurerm_resource_group.resource_group.location
+  location            = var.location
   resource_group_name = azurerm_resource_group.resource_group.name
   size                = "${each.value.size}"
   admin_username      = var.username

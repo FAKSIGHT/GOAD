@@ -5,14 +5,14 @@ resource "tls_private_key" "ssh" {
 
 resource "azurerm_public_ip" "ubuntu_public_ip" {
   name                = "ubuntu-public-ip"
-  location            = azurerm_resource_group.resource_group.location
+  location            = var.location
   resource_group_name = azurerm_resource_group.resource_group.name
   allocation_method   = "Static"
 }
 
 resource "azurerm_network_interface" "ubuntu_jumbox_nic" {
   name                = "ubuntu-jumbox-nic"
-  location            = azurerm_resource_group.resource_group.location
+  location            = var.location
   resource_group_name = azurerm_resource_group.resource_group.name
 
   ip_configuration {
@@ -27,7 +27,7 @@ resource "azurerm_network_interface" "ubuntu_jumbox_nic" {
 resource "azurerm_linux_virtual_machine" "jumpbox" {
   name                = "ubuntu-jumpbox"
   resource_group_name = azurerm_resource_group.resource_group.name
-  location            = azurerm_resource_group.resource_group.location
+  location            = var.location
   size                = var.size
   admin_username      = var.jumpbox_username
   network_interface_ids = [

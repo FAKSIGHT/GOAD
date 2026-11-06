@@ -156,7 +156,7 @@ aws_region = eu-west-3
 aws_zone = eu-west-3c
 
 [azure]
-az_location = swedencentral
+az_location = eastus2
 
 [proxmox]
 pm_api_url = https://192.168.1.1:8006/api2/json

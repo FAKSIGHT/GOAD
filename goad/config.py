@@ -41,7 +41,7 @@ class Config:
         config.set('aws', 'aws_zone', 'eu-west-3c')
 
         config.add_section('azure')
-        config.set('azure', 'az_location', 'eastus2')
+        config.set('azure', 'az_location', 'eastus')
 
         config.add_section('proxmox')
         config.set('proxmox', 'pm_api_url', 'https://192.168.1.1:8006/api2/json')

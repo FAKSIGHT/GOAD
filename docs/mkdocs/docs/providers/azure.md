@@ -37,7 +37,7 @@ az login
 # ~/.goad/goad.ini
 ...
 [azure]
-az_location = eastus2
+az_location = eastus
 ```
 
 - If you want to use a different location you can modify it.
